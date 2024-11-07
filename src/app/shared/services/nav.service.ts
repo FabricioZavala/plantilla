@@ -108,6 +108,17 @@ export class NavService implements OnDestroy {
         { path: '/accounting/sri', title: 'Sri', type: 'link' },
       ],
     },
+    {
+      title: 'fabri',
+      icon: 'charts',
+      type: 'sub',
+      badgeType: 'light-secondary',
+      active: false,
+      children: [
+        { path: '/accounting/billing', title: 'Billing', type: 'link' },
+        { path: '/accounting/sri', title: 'Sri', type: 'link' },
+      ],
+    },
   ];
 
   // Array
