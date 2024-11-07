@@ -5,6 +5,7 @@ import { FilterEjemploComponent } from './components/filters/filter-ejemplo/filt
 import { TableEjemploComponent } from './components/tables/table-ejemplo/table-ejemplo.component';
 import { PageEjemploComponent } from './pages/page-ejemplo/page-ejemplo.component';
 import { EjemploRoutingModule } from './ejemplo-routing.module';
+import { SharedModule } from '../../shared/shared.module';
 
 
 
@@ -18,7 +19,8 @@ import { EjemploRoutingModule } from './ejemplo-routing.module';
   ],
   imports: [
     CommonModule,
-    EjemploRoutingModule
+    EjemploRoutingModule,
+    SharedModule
   ]
 })
 export class EjemploModule { }
