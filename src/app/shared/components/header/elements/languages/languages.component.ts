@@ -12,34 +12,33 @@ export class LanguagesComponent implements OnInit {
 
   public languages: any[] = [
     {
-      language: 'English',
-      code: 'en',
-      type: 'US',
-      icon: 'us',
-    },
-    {
       language: 'Español',
       code: 'es',
-      icon: 'es',
+      icon: 'ec',
     },
     {
-      language: 'Français',
-      code: 'fr',
-      icon: 'fr',
+      language: 'English',
+      code: 'en',
+      // type: 'US',
+      icon: 'us',
     },
-    {
-      language: 'Português',
-      code: 'pt',
-      type: 'BR',
-      icon: 'pt',
-    },
+    // {
+    //   language: 'Français',
+    //   code: 'fr',
+    //   icon: 'fr',
+    // },
+    // {
+    //   language: 'Português',
+    //   code: 'pt',
+    //   type: 'BR',
+    //   icon: 'pt',
+    // },
   ];
 
   public selectedLanguage: any = {
-    language: 'English',
-    code: 'en',
-    type: 'US',
-    icon: 'us',
+    language: 'Español',
+    code: 'es',
+    icon: 'ec',
   };
 
   constructor(
@@ -49,7 +48,7 @@ export class LanguagesComponent implements OnInit {
   //
   ngOnInit() {}
 
-  changeLanguage(lang: { code: string; }) {
+  changeLanguage(lang: { code: string }) {
     this.translate.use(lang.code);
     this.selectedLanguage = lang;
   }

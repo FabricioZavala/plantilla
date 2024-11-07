@@ -20,6 +20,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.elem = document.documentElement;
+    this.loadTheme();
   }
 
   sidebarToggle() {
@@ -33,8 +34,18 @@ export class HeaderComponent implements OnInit {
       document.body.classList.toggle('dark-only');
     }
     document.body.remove;
-  }
 
+    localStorage.setItem(
+      'layoutVersion',
+      this.layout.config.settings.layout_version
+    );
+  }
+  loadTheme(): void {
+    const layoutVersion = localStorage.getItem('layoutVersion');
+    if (layoutVersion === 'dark-only') {
+      document.body.classList.add('dark-only');
+    }
+  }
   searchToggle() {
     this.navServices.search = true;
   }

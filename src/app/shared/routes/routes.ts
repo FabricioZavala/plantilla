@@ -5,6 +5,10 @@ export const content: Routes = [
     path: "dashboard",
     loadChildren: () => import("../../pages/dashboard/dashboard.module").then((m) => m.DashboardModule),
   },
+  {
+    path: "ejemplo",
+    loadChildren: () => import("../../pages/ejemplo/ejemplo.module").then((m) => m.EjemploModule),
+  },
   // {
   //   path: "widgets",
   //   loadChildren: () => import("../../components/widgets/widgets.module").then((m) => m.WidgetsModule),

@@ -12,20 +12,6 @@
     <div class="col-xl-5 p-0">
       <div class="login-card login-dark">
         <div>
-          <div>
-            <a class="logo text-start" routerLink="/">
-              <img
-                class="img-fluid for-light"
-                src="assets/images/logo/logo.png"
-                alt="looginpage"
-              />
-              <img
-                class="img-fluid for-dark"
-                src="assets/images/logo/logo_dark.png"
-                alt="looginpage"
-              />
-            </a>
-          </div>
           <div class="login-main">
             <form
               class="theme-form needs-validation"
@@ -33,15 +19,15 @@
               novalidate=""
               [formGroup]="loginForm" (ngSubmit)="onSubmit()"
             >
-              <h4>Sign in to account</h4>
-              <p>Enter your email & password to login</p>
+              <h4>Ingres su cuenta</h4>
+              <p>Introduzca su correo y su contraseña para iniciar sesión</p>
               <div class="form-group">
-                <label class="col-form-label">Email Address</label>
+                <label class="col-form-label">Correo</label>
                 <input
                   class="form-control"
                   type="email"
                   required=""
-                  placeholder="app@yourmail.com"
+                  placeholder="e1234567890@live.uleam.edu.ec"
                   formControlName="email"
                 />
                 <div
@@ -51,7 +37,7 @@
                     loginForm.controls.email.errors?.['required']
                   "
                 >
-                  Email is required.7
+                  El correo es requerido
                 </div>
                 <div
                   class="invalid-feedback"
@@ -60,11 +46,11 @@
                     loginForm.controls.email.errors?.email
                   "
                 >
-                  Invalid Email Address.
+                  Correo inválido.
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-form-label">Password</label>
+                <label class="col-form-label">Contraseña</label>
                 <input
                   class="form-control"
                   [type]="show ? 'text' : 'password'"
@@ -79,7 +65,7 @@
 
                 >
 
-                Password is required.
+                La contraseña es requerida.
                 </div>
                 <div class="show-hide" (click)="showPassword()" *ngIf="!show">
                   <span class="show"></span>
@@ -92,18 +78,16 @@
                 <div class="checkbox p-0">
                   <input id="checkbox1" type="checkbox" />
                   <label  for="checkbox1"
-                    >Remember password</label
+                    >Recordar contraseña</label
                   >
                 </div>
-                <a class="link"
-                  >Forgot password?</a
-                >
+                
                 <button
                   class="btn btn-primary d-block w-100"
                   type="submit"
                   [disabled]="!loginForm.valid"
                 >
-                  Sign in
+                  Iniciar sesión
                 </button>
               </div>
             </form>

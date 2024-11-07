@@ -1,5 +1,6 @@
 import { Component, PLATFORM_ID, Inject } from '@angular/core';
 import { LoadingBarService } from '@ngx-loading-bar/core';
+import { TranslateService } from '@ngx-translate/core';
 import { map, delay, withLatestFrom } from 'rxjs/operators';
 
 @Component({
@@ -19,11 +20,12 @@ export class AppComponent {
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
-    private loader: LoadingBarService
+    private loader: LoadingBarService,
+    private translate: TranslateService
   ) {
-    // if (isPlatformBrowser(this.platformId)) {
-    //   translate.setDefaultLang('en');
-    //   translate.addLangs(['en', 'de', 'es', 'fr', 'pt', 'cn', 'ae']);
-    // }
+    this.translate.setDefaultLang('es');
+
+    const browserLang = this.translate.getBrowserLang() || 'es';
+    this.translate.use(browserLang.match(/es|en/) ? browserLang : 'es');
   }
 }

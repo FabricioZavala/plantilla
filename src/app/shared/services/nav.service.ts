@@ -88,14 +88,13 @@ export class NavService implements OnDestroy {
     {
       title: 'Dashboard',
       icon: 'home',
-      type: 'sub',
+      type: 'link',
       badgeType: 'light-primary',
       active: true,
       path: '/dashboard/default',
     },
     {
-      headTitle1: 'Applications',
-      headTitle2: 'Ready To Use Apps.',
+      headTitle1: 'Testeo',
     },
     {
       title: 'Accounting',
@@ -109,18 +108,19 @@ export class NavService implements OnDestroy {
       ],
     },
     {
-      title: 'fabri',
-      icon: 'charts',
-      type: 'sub',
+      headTitle1: 'Separador',
+    },
+    {
+      title: 'example',
+      path:'/ejemplo',
+      icon: 'search',
+      type: 'link',
       badgeType: 'light-secondary',
-      active: false,
-      children: [
-        { path: '/accounting/billing', title: 'Billing', type: 'link' },
-        { path: '/accounting/sri', title: 'Sri', type: 'link' },
-      ],
+      active: false, 
     },
   ];
 
   // Array
   items = new BehaviorSubject<Menu[]>(this.MENUITEMS);
 }
+ 
