@@ -6,6 +6,10 @@ export const content: Routes = [
     loadChildren: () => import("../../pages/dashboard/dashboard.module").then((m) => m.DashboardModule),
   },
   {
+    path: "user",
+    loadChildren: () => import("../../pages/profile/profile.module").then((m) => m.ProfileModule),
+  },
+  {
     path: "ejemplo",
     loadChildren: () => import("../../pages/ejemplo/ejemplo.module").then((m) => m.EjemploModule),
   },

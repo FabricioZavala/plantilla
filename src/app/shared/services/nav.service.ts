@@ -93,6 +93,14 @@ export class NavService implements OnDestroy {
       active: true,
       path: '/dashboard/default',
     },
+    // {
+    //   title: 'Perfil',
+    //   icon: 'user',
+    //   type: 'link',
+    //   badgeType: 'light-primary',
+    //   active: true,
+    //   path: '/user/profile',
+    // },
     {
       headTitle1: 'Testeo',
     },
